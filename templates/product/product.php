@@ -36,12 +36,6 @@
         </div>      
     </div>
     <!--	End Product	--> 
-    <div id="pagination">
-        <ul class="pagination">
-            <?php
-                echo $page_nav;
-            ?>
-        </ul> 
-    </div>        
+          
             
             

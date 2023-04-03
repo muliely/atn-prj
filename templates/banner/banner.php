@@ -13,7 +13,7 @@
                     	<a href="#"><img class="img-fluid" src="images/banner-04.jpg"></a>
                     </div>
                     <div class="banner-item">
-                    	<a href="#"><img class="img-fluid" src="images/banner-05.png"></a>
+                    	<a href="#"><img class="img-fluid" src="images/banner-05.jpg"></a>
                     </div>                    
                 </div>
             </div>

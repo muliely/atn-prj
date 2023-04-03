@@ -4,8 +4,8 @@
         	<div id="logo-2" class="col-lg-3 col-md-6 col-sm-12">
             	<h2><a href="#"><img src="images/bteclogo.png" width="136px" height="42px"></a></h2>
                 <p>
-                	<b>Mulie Auto Authorized Seller</b> <br>
-                    Your best partner in Auto Services
+                	<b>Mulie Toys Authorized Seller</b> <br>
+                    Your best partner in Toys Retailer
                 </p>
 
             </div>
