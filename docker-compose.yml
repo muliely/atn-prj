@@ -3,7 +3,7 @@ services:
   web:
     image: php:7.4-apache
     ports:
-      - "80:80"
+      - "06:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -13,16 +13,16 @@ services:
     volumes:
       - ./data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: online
-      MYSQL_USER: dbuser
-      MYSQL_PASSWORD: dbPass@123
-      MYSQL_ROOT_PASSWORD: 123@123Aa
+      MYSQL_DATABASE: assignment2_autoshop
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadin
     ports:
-      - '06.80'
+      - '2381.80'
     restart: always
     environment:
       PMA_HOST: db
