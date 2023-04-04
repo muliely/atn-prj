@@ -1,16 +1,30 @@
 <?php
-// Database credentials
-$dbHost = 'db';
-$dbUsername = 'thuy';
-$dbPassword = 'thuy@123';
-$dbName = 'assignment2_autoshop';
+class ConnectDatabase {
 
-// Create a database connection
-$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+    private $servername;
+    private $username;
+    private $password;
+    private $dbname;
 
-// Check for connection errors
-if (mysqli_connect_errno()) {
-    die("Failed to connect to MySQL: " . mysqli_connect_error());
+    function __construct() {
+        $this->servername = "db";
+        $this->username = "thuy";
+        $this->password = "thuy@123";
+        $this->dbname = "assignment2_autoshop";
+    }
+    function connect() {
+        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+            return false;
+        }
+        else{
+            return $conn;
+        }
+    }
+    public function dieconnect($conn)
+    {
+        mysqli_close($conn);
+    }
 }
-
 ?>
