@@ -1,5 +1,16 @@
 <?php
-	$connect = mysqli_connect('db', 'thuy', 'thuy@123', 'assignment2_autoshop');
-	if($connect) mysqli_query($connect, "set names 'utf8'");
-	else echo "DB ERROR";
+// Database credentials
+$dbHost = 'db';
+$dbUsername = 'thuy';
+$dbPassword = 'thuy@123';
+$dbName = 'assignment2_autoshop';
+
+// Create a database connection
+$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Check for connection errors
+if (mysqli_connect_errno()) {
+    die("Failed to connect to MySQL: " . mysqli_connect_error());
+}
+
 ?>
