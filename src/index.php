@@ -17,11 +17,12 @@
 
 <?php
 	ob_start();
-	session_start();
-	include_once('admin/config/connect.php');
+    include_once('admin/config/connect.php');
     include_once('templates/header/header.php');
     include_once('templates/home.php');
     include_once('templates/footer/footer.php');
+	session_start();
+	
 ?>
 
 </body>
