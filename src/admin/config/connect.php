@@ -1,30 +1,19 @@
 <?php
-class ConnectDatabase {
+$currency = '&#8377; '; //Currency Character or code
 
-    private $servername;
-    private $username;
-    private $password;
-    private $dbname;
+$db_username = 'dbuser';
+$db_password = 'dbPass@123';
+$db_name = 'online';
+$db_host = 'db';
 
-    function __construct() {
-        $this->servername = "db";
-        $this->username = "thuy";
-        $this->password = "thuy@123";
-        $this->dbname = "assignment2_autoshop";
-    }
-    function connect() {
-        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-            return false;
-        }
-        else{
-            return $conn;
-        }
-    }
-    public function dieconnect($conn)
-    {
-        mysqli_close($conn);
-    }
+$shipping_cost      = 1.50; //shipping cost
+$taxes              = array( //List your Taxes percent here.
+                            'VAT' => 12, 
+                            'Service Tax' => 5
+                            );						
+//connect to MySql						
+$mysqli = new mysqli($db_host, $db_username, $db_password,$db_name);						
+if ($mysqli->connect_error) {
+    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 ?>
