@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     image: php:7.4-apache
+    container_name: web
     ports:
       - "2306:80"
     volumes:
@@ -10,20 +11,21 @@ services:
       - db
   db:
     image: mysql:5.7
+    container_name: db
     volumes:
       - ./data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: assignment2_autoshop
-      MYSQL_USER: thuy
-      MYSQL_PASSWORD: thuy@123
-      MYSQL_ROOT_PASSWORD: 123@123Aa
-
+      MYSQL_DATABASE: toys
+      MYSQL_USER: thuyht
+      MYSQL_PASSWORD: thuyht@123
+      MYSQL_ROOT_PASSWORD: thuyht@A123
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     ports:
-      - '2381:80'
+      - '2106:80'
     restart: always
     environment:
       PMA_HOST: db
-    
+    depends_on:
+      - db
