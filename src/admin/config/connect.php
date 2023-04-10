@@ -8,9 +8,9 @@ class ConnectDatabase {
 
     function __construct() {
         $this->servername = "db";
-        $this->username = "thuyht";
-        $this->password = "thuyht@123";
-        $this->dbname = "toys";
+        $this->username = "thuy";
+        $this->password = "thuy@123";
+        $this->dbname = "assignment2_autoshop";
     }
     function connect() {
         $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
